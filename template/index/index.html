@@ -1,0 +1,137 @@
+{include file="index/header.html"}
+<div id="mainbody">
+    <div class="blank"></div>
+
+    <div class="blogs">
+
+        <ul style="float: left" class="bloglist">
+            {foreach $result as $v}
+            <li>
+                <div class="arrow_box">
+                    <div class="ti"></div>
+                    <!--三角形-->
+                    <div class="ci"></div>
+                    <!--圆形-->
+                    <h2 class="title"><a href="index.php?m=index&f=art&a=artshow&sid={$v['sid']}" target="_blank">{$v["stitle"]}</a></h2>
+                    <ul class="textinfo">
+                        <a href="javascript:;"><img src="{IMG_PATH}/01.jpg"></a>
+                        <p>
+                            <a href="index.php?m=index&f=art&a=artshow&sid={$v['sid']}">{$v["scon"]|truncate:100:"":true}</a>
+                        </p>
+                    </ul>
+                    <ul class="details">
+                        <li class="likes"><a href="#">{$v["good"]}</a></li>
+                        <li class="comments"><a href="#">{$v["hits"]}</a></li>
+                        <li class="icon-time"><a href="#">{$v["stime"]}</a></li>
+                    </ul>
+                </div>
+                <!--arrow_box end-->
+            </li>
+            {/foreach}
+            <li>
+                <div style="background: #ccc;width: 100px;height: 30px;border-radius: 4px;box-shadow: 10px 10px 10px #282828 inset,-10px -10px 10px #282828 inset;margin-left:200px;text-align: center">
+                    <a href="index.php?m=index&f=index&a=xiang" style="color:white;line-height: 30px;text-align: center">点击查看更多</a>
+                </div>
+            </li>
+        </ul>
+
+        <!--bloglist end-->
+
+        <aside>
+            <div class="tuijian">
+                <h2>推荐文章</h2>
+                <ol>
+                    {foreach $hitslist as $v}
+                    <li><strong style="color:orange">~</strong><a href="index.php?m=index&f=art&a=artshow&sid={$v['sid']}" target="_blank">{$v["stitle"]}</a></li>
+                    {/foreach}
+                </ol>
+            </div>
+            <div class="toppic">
+                <h2>热门文章</h2>
+                <ul>
+                    {foreach $lovelist as $v}
+                    <li><a href="index.php?m=index&f=art&a=artshow&sid={$v['sid']}" target="_blank">{$v["stitle"]}</a></li>
+                    {/foreach}
+                </ul>
+            </div>
+            <div class="clicks">
+                <h2>热门点击</h2>
+                <ol>
+                    {foreach $hitslist as $v}
+                    <li><a href="index.php?m=index&f=art&a=artshow&sid={$v['sid']}" target="_blank">{$v["stitle"]}</a></li>
+                    {/foreach}
+                </ol>
+            </div>
+            <div class="search">
+                <form class="searchform" method="get" action="#">
+                    <input type="text" name="s" value="Search" onfocus="this.value=''" onblur="this.value='Search'">
+                </form>
+            </div>
+        </aside>
+    </div>
+    <!--blogs end-->
+</div>
+<!--mainbody end-->
+<footer>
+    <div class="footer-mid">
+        <div class="links">
+            <h2>友情链接</h2>
+            <ul>
+                <li><a href="javascript:;">王小辉个人博客</a></li>
+                <li><a href="http://www.3dst.com">3DST技术服务中心</a></li>
+            </ul>
+        </div>
+        <div class="visitors">
+            <h2>最新评论</h2>
+            <dl>
+                <dt><img src="{IMG_PATH}/s8.jpg">
+                <dt>
+                <dd>DanceSmile
+                    <time>49分钟前</time>
+                </dd>
+                <dd>在 <a href="javascript:;" class="title">如果要学习web前端开发，需要学习什么？ </a>中评论：</dd>
+                <dd>文章非常详细，我很喜欢.前端的工程师很少，我记得几年前yahoo花高薪招聘前端也招不到</dd>
+            </dl>
+            <dl>
+                <dt><img src="{IMG_PATH}/s7.jpg">
+                <dt>
+                <dd>yisa
+                    <time>2小时前</time>
+                </dd>
+                <dd>在 <a href="javascript:;" class="title">芭蕾女孩的心事儿</a>中评论：</dd>
+                <dd>我手机里面也有这样一个号码存在</dd>
+            </dl>
+            <dl>
+                <dt><img src="{IMG_PATH}/s6.jpg">
+                <dt>
+                <dd>小林博客
+                    <time>8月7日</time>
+                </dd>
+                <dd>在 <a href="javascript:;" class="title">如果个人博客网站再没有价值，你还会坚持吗？ </a>中评论：</dd>
+                <dd>博客色彩丰富，很是好看</dd>
+            </dl>
+        </div>
+        <section class="flickr">
+            <h2>摄影作品</h2>
+            <ul>
+                <li><a href="javascript:;"><img src="{IMG_PATH}/01.jpg"></a></li>
+                <li><a href="javascript:;"><img src="{IMG_PATH}/02.jpg"></a></li>
+                <li><a href="javascript:;"><img src="{IMG_PATH}/03.jpg"></a></li>
+                <li><a href="javascript:;"><img src="{IMG_PATH}/04.jpg"></a></li>
+                <li><a href="javascript:;"><img src="{IMG_PATH}/05.jpg"></a></li>
+                <li><a href="javascript:;"><img src="{IMG_PATH}/06.jpg"></a></li>
+                <li><a href="javascript:;"><img src="{IMG_PATH}/07.jpg"></a></li>
+                <li><a href="javascript:;"><img src="{IMG_PATH}/08.jpg"></a></li>
+                <li><a href="javascript:;"><img src="{IMG_PATH}/09.jpg"></a></li>
+            </ul>
+        </section>
+    </div>
+    <div class="footer-bottom">
+        <p>Copyright 2013 Design by <a href="">DanceSmile</a></p>
+    </div>
+</footer>
+<!-- jQuery仿腾讯回顶部和建议 代码开始 -->
+<div id="tbox"> <a id="togbook" href=""></a> </div>
+
+</body>
+</html>

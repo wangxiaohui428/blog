@@ -1,0 +1,35 @@
+{include file="index/header.html"}
+<style>
+    *{
+        color: #fff;
+    }
+.xiangshow {
+    width: 1200px;
+    height: auto;
+    overflow: hidden;
+    /*border: 1px solid #ccc;*/
+    margin: 0 auto;
+}
+.xiangshow h1{
+    font-size: 20px;
+}
+    .xiangtitle{
+        font-size: 16px;
+    }
+</style>
+<div class="xiangshow">
+    <h1>最新文章</h1>
+    {foreach $xiang as $v}
+    <div class="xiangtitle">
+        [{$v['cname']}]
+    </div>
+
+    {foreach $v["son"] as $v1}
+    <div class="xiangcon">
+        <a href="index.php?m=index&f=art&a=artshow&sid={$v1['sid']}">{$v1['stitle']}</a>
+    </div>
+
+    {/foreach}
+    <hr>
+    {/foreach}
+</div>

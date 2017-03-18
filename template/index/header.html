@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>聆听心的声音</title>
+    <meta name="keywords" content="黑色模板,个人网站模板,个人博客模板,博客模板,css3,html5,网站模板" />
+    <meta name="description" content="这是一个有关黑色时间轴的css3 html5 网站模板" />
+    <link href="{CSS_PATH}/index/styles.css" rel="stylesheet">
+    <link href="{CSS_PATH}/index/animation.css" rel="stylesheet">
+    <!-- 返回顶部调用 begin -->
+    <link href="{CSS_PATH}/index/lrtk.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{CSS_PATH}/index/public.css">
+    <link rel="stylesheet" href="{CSS_PATH}/index/header.css">
+    <script type="text/javascript" src="{JS_PATH}/jquery-min.js"></script>
+    <script type="text/javascript" src="{JS_PATH}/index/js.js"></script>
+    <script src="{JS_PATH}/index/header.js"></script>
+    <!-- 返回顶部调用 end-->
+    <!--[if lt IE 9]>
+    <!--<script src="{JS_PATH}/index/modernizr.js"></script>-->
+    <![endif]-->
+</head>
+<body>
+<header>
+    <nav id="nav">
+        <ul>
+            <li><a href="index.php" >网站首页</a></li>
+            <li style="float: right">
+                <ul>
+                    {if empty($nickname)}
+                    <li><a href="index.php?m=index&f=login&a=startLogin">登录</a></li>
+                    <li><a href="index.php?m=index&f=login&a=reg">注册</a></li>
+                    {else}
+                    <li><a href="javascript:;">欢迎{$nickname}回来</a></li>
+                    <li><a href="index.php?m=index&f=login&a=unlogin">退出登录</a></li>
+                    {/if}
+
+                    <li><a href="index.php?m=index&f=art&a=addcon">添加文章</a></li>
+                    <li><a href="index.php?m=index&f=home">个人中心</a></li>
+                </ul>
+
+            </li>
+        </ul>
+        <script src="js/silder.js"></script><!--获取当前页导航 高亮显示标题-->
+    </nav>
+</header>
+<!--header end-->
+{include file="index/notice.html"}

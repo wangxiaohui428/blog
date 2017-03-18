@@ -1,0 +1,46 @@
+/**{*/
+    /*margin:0;*/
+/*}*/
+/*.box{
+    height:250px;
+    width:400px;
+    padding-top:10px;
+    border:1px solid #000;
+    margin:auto;
+    position:fixed;
+    left:0;top:0;right:0;bottom:100px;
+    line-height:28px;
+    text-align:center;
+}*/
+
+/*h3{
+    text-align:center;
+    height:40px;
+    line-height:30px;
+}
+.box span{
+    line-height:18px;
+    font-size:12px;
+}
+p{
+    line-height:28px;
+}*/
+
+.box{
+    padding-top:50px;
+    width:600px;
+    margin:0 auto;
+}
+img.code{
+    height:30px;
+    width:100px;
+    vertical-align:middle;cursor:pointer;
+}
+
+span.codes{
+    display:inline-block;
+    height:10px;
+    width:10px;
+    border-radius: 50%;
+    background:orange;
+}

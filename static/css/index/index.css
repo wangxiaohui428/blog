@@ -1,0 +1,161 @@
+#box{
+    width: 1002px;
+    height: 502px;
+    margin:20px auto;
+    border:1px solid #000;
+    position: relative;
+    overflow: hidden;
+}
+#box .imgbox{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+#box .imgbox li{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 100%;
+}
+#box .imgbox img{
+    width: 100%;
+    height: 100%;
+}
+#box .imgbox .first{
+    left: 0;
+}
+#box .circle{
+    width: 300px;
+    height: 50px;
+    position: absolute;
+    bottom: 40px;
+    left: 300px;
+}
+#box .circle li{
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    background: red;
+    float: left;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#box .circle .first{
+    background: #000;
+}
+#box .left,#box .right {
+    width: 40px;
+    height: 70px;
+    background: rgba(0,0,0,0.6);
+    position: absolute;
+    top:250px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 70px;
+    color: #fff;
+    cursor:pointer;
+}
+#box .left{
+    left: 0;
+}
+#box .right{
+    right: 0;
+}
+.content{
+    width:1000px;
+    margin:0 auto;
+    position:relative;
+}
+.content h2{
+    line-height:60px;
+    font-size:18px;
+    color:#333;
+    font-weight:300;
+    border-bottom:1px solid #555;
+}
+/*文章列表 start*/
+.conlist{
+    width:690px;
+    float:left;
+    padding-top:30px;
+    padding-bottom:30px;
+}
+
+
+.conlist li{
+    height:64px;
+    border-bottom:1px solid #555;
+}
+
+.conlist li h3{
+    line-height:40px;
+    height:40px;
+    /*overflow:hidden;*/
+    font-size:16px;
+}
+
+.conlist li .info{
+    overflow:hidden;
+    line-height:24px;
+    height:24px;
+}
+.conlist li .info span{
+    margin-right:10px;
+    font-size:12px;
+    color:#666;
+}
+
+/*文章列表 start*/
+/*右边排行榜 start*/
+.rightbox{
+    width:290px;
+    padding-left:10px;
+    position:absolute;
+    right:0;
+    top:30px;
+    border-left:1px solid #ddd;
+}
+ .listbox{
+     padding:10px;
+     margin-bottom:10px;
+     border-radius: 3px;
+}
+.listbox h2{
+    border:none;
+}
+.listbox li{
+    height:30px;
+    overflow: hidden;
+}
+.listbox li h3{
+    line-height:29px;
+}
+.listbox a{
+    display:block;
+}
+
+.hitlist{
+    border:1px solid #F6BA59;
+}
+.hitlist li h3{
+    border-bottom:1px solid #F6BA59;
+}
+.hitlist a:hover{
+    color:#F6BA59;
+}
+.lovelist{
+    border:1px solid orangered;
+}
+.lovelist li h3{
+    border-bottom:1px solid orangered;
+}
+.lovelist a:hover{
+    color:orangered;
+}
+/*右边排行榜 start*/
+
+

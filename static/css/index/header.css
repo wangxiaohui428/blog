@@ -1,0 +1,26 @@
+
+/*头部 start*/
+.topnav{
+    height:60px;
+    width:1000px;
+    margin:0 auto;
+    border-bottom:1px solid #ddd;
+}
+.topnav .message{
+    height:100%;
+    line-height:60px;
+    width:200px;
+    float:left;
+}
+.topnav ul{
+    float:right;
+    height:100%;
+}
+.topnav ul>li{
+    height:100%;
+    padding:0 5px;
+    float:left;
+    line-height:60px;
+}
+
+/*头部 end*/

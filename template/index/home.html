@@ -1,0 +1,101 @@
+{include file="index/header.html"}
+<link rel="stylesheet" href="{CSS_PATH}/index/public.css">
+<link rel="stylesheet" href="{CSS_PATH}/index/home.css">
+<script src="{JS_PATH}/index/upload.js"></script>
+<script src="{JS_PATH}/index/home.js"></script>
+<style>
+    *{
+        color:white;
+    }
+    .imgbox{
+        margin-left:400px;
+    }
+    .leftbox h3{
+        margin-left: 400px;
+        border:0;
+    }
+    .leftbox h3 a{
+        margin-left: 10px;
+    }
+    .add_touxiang{
+        width: 400px;
+        height: 400px;
+        position:fixed;
+        top:90px;
+        left:800px;
+    }
+    .add_touxiang{
+        display: none;
+    }
+</style>
+<div class="content">
+    <div class="topbox">
+        <div class="imgbox">
+            <img src="{$touxiang}" alt="">
+        </div>
+        <div class="leftbox">
+            <h3>{$nickname}<a href="javascript:;" class="edit">编辑个人资料</a></h3>
+            <ul class="info">
+                <li>
+                    <a href="javascript:;">{$guanzhu}<br/>关注</a>
+                </li>
+                <li>
+                    <a href="javascript:;">{$be_guanzhu}<br/>粉丝</a>
+                </li>
+                <li>
+                    <a href="javascript:;">{$love}<br/>收藏</a>
+                </li>
+                <li>
+                    <a href="javascript:;">{$be_love}<br/>被收藏</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        <h3>发表文章</h3>
+        <ul>
+            {foreach $stitles as $v}
+            <li><span>[{$v['cname']}]</span><a href="index.php?m=index&f=art&a=artshow&sid={$v['sid']}">{$v['stitle']}</a></li>
+            {/foreach}
+        </ul>
+    </div>
+
+    <div class="add_touxiang">
+        <form action="index.php?m=admin&f=upload&a=addtouxiangInfo" method="post">
+            添加图片：<input type="file"  name="file" id="img_file"><br/>
+            <div class="box">
+                <div class="img"><img src="" alt=""></div>
+                <div class="img_progress"></div>
+            </div>
+            <input type="hidden" name="imgurl" id="imgurl">
+            <input type="hidden" name="uid" value="{$uid}">
+            <input type="submit" class="btn btn-default select" id="imgurl_btn" value="确认上传" style="color:black">
+        </form>
+    </div>
+
+</div>
+<script>
+    $(".edit").click(function () {
+        $(".add_touxiang").css("display","block");
+    })
+    $("#imgurl_btn").click(function () {
+        $(".add_touxiang").css("display","none");
+    })
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

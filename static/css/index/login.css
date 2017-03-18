@@ -1,0 +1,14 @@
+.box{
+    padding-top:50px;
+    width:600px;
+    margin:0 auto;
+}
+img.code{
+    height:30px;
+    width:100px;
+    vertical-align:middle;cursor:pointer;
+}
+
+.unlogin{
+    margin-left:5px;
+}
